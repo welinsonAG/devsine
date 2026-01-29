@@ -6,9 +6,9 @@ export const Container = styled.div`
   align-items: center;
 
   img {
-    width: 220px;        /* largura controlada */
-    height: 330px;       /* altura fixa padrão card */
-    object-fit: cover;  /* evita distorção */
+    width: 220px;        
+    height: 330px;       
+    object-fit: cover;  
     border-radius: 20px;
     display: block;
   }
