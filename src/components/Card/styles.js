@@ -1,24 +1,32 @@
 import styled from "styled-components";
 
-
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
- 
 
-img{
-  border-radius:30px;
-  width:300px;
-  height:100%;
+  img {
+    width: 220px;        /* largura controlada */
+    height: 330px;       /* altura fixa padrão card */
+    object-fit: cover;  /* evita distorção */
+    border-radius: 20px;
+    display: block;
+  }
 
+  h3 {
+    margin-top: 12px;
+    color: #ffffff;
+    font-size: 14px;
+    text-align: center;
+    max-width: 220px;
+  }
+
+  img {
+  transition: transform 0.3s ease;
 }
 
-h3{
-  margin-top:15px;
-  color:#ffffff;
-
+img:hover {
+  transform: scale(1.05);
 }
+
 `;
-

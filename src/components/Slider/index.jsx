@@ -1,30 +1,31 @@
 import { Link } from "react-router-dom";
-import Card from "../Card/index.jsx";
-import { Container } from "./styles.js";
+import Card from "../Card";
+import { Container } from "./styles";
 import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
 
 export default function Slider({ info, title, route = "detalhe" }) {
-
-
   return (
     <Container>
-    
       <h2>{title}</h2>
+
       <Swiper
-        grabCursor
-        spaceBetween={10}
-        slidesPerView={"auto"}
-        className="swiper"
+        spaceBetween={20}
+        slidesPerView={5}
+        breakpoints={{
+          320: { slidesPerView: 2 },
+          640: { slidesPerView: 3 },
+          1024: { slidesPerView: 5 },
+        }}
       >
-        {info.map((item, index) => (
-          <SwiperSlide key={index}>
-              <Link to={`/${route}/${item.id}`}>
-            <Card item={item} />
+        {info.map((item) => (
+          <SwiperSlide key={item.id}>
+            <Link to={`/${route}/${item.id}`}>
+              <Card item={item} />
             </Link>
           </SwiperSlide>
         ))}
       </Swiper>
-    
     </Container>
   );
 }

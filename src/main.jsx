@@ -8,6 +8,8 @@ import Router from './routes/routes.jsx';
 
 import  GlobalStyles  from "./styles/globalStyles";
 
+import "swiper/css";
+
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <BrowserRouter>
