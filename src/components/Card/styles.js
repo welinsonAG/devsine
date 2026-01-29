@@ -6,8 +6,8 @@ export const Container = styled.div`
   align-items: center;
 
   img {
-    width: 220px;        
-    height: 330px;       
+    width: 100%;        
+    height: 100%;       
     object-fit: cover;  
     border-radius: 20px;
     display: block;
